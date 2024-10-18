@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0e0f1a;
+}
+
+.lava-lamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 120px;
+}
+
+/* Trapezoid shape for the top */
+.lamp-top {
+  width: 60px;
+  height: 40px;
+  background-color: #252527;
+  clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0); /* Creates a trapezoid */
+  box-shadow: 0 0 10px rgba(255, 130, 50, 0.5);
+  margin-bottom: -5px;
+}
+
+/* Glass part, same as before */
+.lamp-glass {
+  width: 120px;
+  height: 300px;
+  background: #252527;
+  border-radius: 40% 40% 10% 10%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 130, 50, 0.6), 0 0 30px rgba(255, 130, 50, 0.4);
+}
+
+.lava {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(
+    circle at 50% 100%,
+    rgba(255, 100, 50, 0.9),
+    rgba(255, 50, 30, 0.5)
+  );
+}
+
+/* Trapezoid shape for the bottom */
+.lamp-bottom {
+  width: 80px;
+  height: 50px;
+  background-color: #252527;
+  clip-path: polygon(0 100%, 100% 100%, 80% 0, 20% 0); /* Creates a trapezoid */
+  box-shadow: 0 0 15px rgba(255, 130, 50, 0.6), 0 0 30px rgba(255, 130, 50, 0.4);
+  margin-top: -10px;
+}
+
+.blob {
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(255, 170, 60, 0.9),
+    rgba(255, 120, 30, 0.8)
+  );
+  border-radius: 50%;
+  animation: rise 8s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.blob1 {
+  width: 60px;
+  height: 80px;
+  bottom: 5%;
+  left: 30%;
+  animation-duration: 9s;
+  animation-delay: 0s;
+}
+
+.blob2 {
+  width: 40px;
+  height: 50px;
+  bottom: 40%;
+  left: 10%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.blob3 {
+  width: 70px;
+  height: 90px;
+  bottom: 10%;
+  left: 50%;
+  animation-duration: 7s;
+  animation-delay: 4s;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scaleX(1);
+  }
+  25% {
+    transform: translateY(-30px) scaleX(1.2);
+  }
+  50% {
+    transform: translateY(-70px) scaleX(0.8);
+  }
+  75% {
+    transform: translateY(-120px) scaleX(1.1);
+  }
+  100% {
+    transform: translateY(-200px) scaleX(1);
+  }
+}

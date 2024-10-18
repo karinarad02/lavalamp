@@ -21,7 +21,6 @@ body {
   height: 40px;
   background-color: #252527;
   clip-path: polygon(0 100%, 100% 100%, 80% 0, 20% 0);
-  z-index: 1;
 }
 
 .lamp-top.reversed {
@@ -31,11 +30,9 @@ body {
 .lava {
   width: 80px;
   height: 300px;
-  background: linear-gradient(rgba(255, 100, 50, 0.9), rgba(255, 50, 30, 0.5));
-  box-shadow: 0 0 15px rgba(255, 130, 50, 0.6), 0 0 30px rgba(255, 130, 50, 0.4);
+  background: linear-gradient(rgba(255, 100, 50), rgba(255, 50, 30));
   border-radius: 60px 60px 20px 20px;
   position: relative;
-  z-index: 1;
 }
 
 .lava::before {
@@ -46,7 +43,7 @@ body {
   left: -20%;
   transform: rotate(6deg);
   border-radius: 5% 5% 0% 30%;
-  background: linear-gradient(rgba(255, 100, 50, 0.9), rgba(255, 50, 30, 0.5));
+  background: linear-gradient(rgba(255, 100, 50), rgba(255, 50, 30));
   box-shadow: 0 0 15px rgba(255, 130, 50, 0.6), 0 0 30px rgba(255, 130, 50, 0.4);
 }
 
@@ -58,7 +55,7 @@ body {
   right: -20%;
   transform: rotate(-6deg);
   border-radius: 5% 5% 30% 0%;
-  background: linear-gradient(rgba(255, 100, 50, 0.9), rgba(255, 50, 30, 0.5));
+  background: linear-gradient(rgba(255, 100, 50), rgba(255, 50, 30));
   box-shadow: 0 0 15px rgba(255, 130, 50, 0.6), 0 0 30px rgba(255, 130, 50, 0.4);
 }
 
